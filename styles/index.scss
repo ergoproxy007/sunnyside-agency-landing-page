@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@700&display=swap');
+
+@import './token.scss';
+
+body {
+    font-family: $text-default-font-family;
+    text-rendering: optimizeLegibility !important;
+    -webkit-font-smoothing: antialiased !important;
+    width: 100%;
+    height: 100%;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+  
+a {
+    display: block;
+    text-decoration: none;
+    color: $color-white;
+    font-size: $text-default-font-size;
+    padding: 1px 18px 1px 1px;
+}
+
+a:hover,
+a:focus {
+  text-decoration: underline;
+  color: $color-yellow;
+}
+
+label {
+    font-size: $text-default-font-size;
+    color: $color-white;
+    font-size: $text-font-size-sunnyside;
+}
+
+/* Header Section */
+.landing-intro {
+    display: table;
+    width: 100%;
+    height: 400px;
+    padding: 0;
+
+    &__header {
+        background: url(../images/desktop/image-header.jpg) center center no-repeat;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        background-size: cover;
+        -o-background-size: cover;
+    }
+
+    &__tittle {
+        text-align: center;
+        color: $color-white;
+        text-transform: uppercase;
+    }
+
+    &__nav-bar {
+        padding: 30px 50px 60px 30px;
+        
+        &--right {
+            float: right;
+        }
+        &--left {
+            float: left;
+        }
+    }
+  }
