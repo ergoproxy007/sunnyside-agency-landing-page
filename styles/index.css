@@ -92,9 +92,11 @@ label {
   display: flex;
 }
 .landing-slogan__text-container {
-  width: 50%;
   display: flex;
   align-items: center;
+  width: 54%;
+}
+.landing-slogan__text-article {
   margin-left: 150px;
   margin-right: 100px;
 }
@@ -116,7 +118,13 @@ label {
   margin-top: 40px;
 }
 .landing-slogan__picture {
-  width: 50%;
+  padding: 0;
+}
+.landing-slogan__img {
+  width: 100%;
+}
+.landing-slogan__background {
+  width: 100%;
 }
 
 .landing-slogan a {
