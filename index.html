@@ -13,41 +13,56 @@
 
 <body>
   <main class="landing">
-    <header class="landing-intro landing-intro__header">
-      <ul class="landing-intro__nav-bar">
-        <li class="landing-intro__nav-bar--right">
-          <a href="#About">
-            Contact
-          </a>
-        </li>
-        <li class="landing-intro__nav-bar--right">
-          <a href="#Services">
-            Projects
-          </a>
-        </li>
-        <li class="landing-intro__nav-bar--right">
-          <a href="#Services">
-            Services
-          </a>
-        </li>
-        <li class="landing-intro__nav-bar--right">
-          <a href="#Contact">
-            About
-          </a>
-        </li>
-        <li class="landing-intro__nav-bar--left">
-          <label>sunnyside</label>
-        </li>
-      </ul>
-      <div class="landing-intro__tittle">
-        <h1>We are creatives</h1>
+    <!-- header component  -->
+    <header class="landing-header landing-header__background">
+      <nav class="landing-header__nav-bar">
+        <ul>
+          <li class="landing-header__nav-bar--contact">
+            <a href="#Contact" class="landing-header__nav-bar--contact-bubble">CONTACT</a>
+          </li>
+          <li class="landing-header__nav-bar--right">
+            <a href="#Projects">Projects</a>
+          </li>
+          <li class="landing-header__nav-bar--right">
+            <a href="#Services">Services</a>
+          </li>
+          <li class="landing-header__nav-bar--right">
+            <a href="#About">About</a>
+          </li>
+          <li class="landing-header__nav-bar--left">
+            <label>sunnyside</label>
+          </li>
+        </ul>
+      </nav>
+      <div class="landing-header__tittle">
+        <h1>we are creatives</h1>
       </div>
     </header>
-    Transform your brand
-
-    We are a full-service creative agency specializing in helping brands grow fast. 
-    Engage your clients through compelling visuals that do most of the marketing for you.
-  
+    <main class="landing-slogan">
+      <article class="landing-slogan__main-container">
+        <!-- slogan text component -->
+        <section class="landing-slogan__text-container">
+          <article>
+            <header class="landing-slogan__text-header">
+              <p class="landing-slogan__text-header--title">Transform your brand</p>
+            </header>
+            <main>
+              <p class="landing-slogan__paragraph">We are a full-service creative agency specializing in helping brands grow fast. 
+                Engage your clients through compelling visuals that do most of the marketing for you.</p>
+            </main>
+            <footer class="landing-slogan__footer">
+              <a href="#Learn" >LEARN MORE</a>
+            </footer>
+          </article>
+        </section>
+        <!-- slogan picture component -->
+        <section class="landing-slogan__picture">
+          <picture class="landing-content landing-content__background">
+            <img src="images/desktop/image-transform.jpg" />
+          </picture>
+        </section>
+      </article>
+    </main>
     Learn more
   
     Stand out to the right audience
