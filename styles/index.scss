@@ -4,6 +4,7 @@
 @import './token.scss';
 
 body {
+    display: flex;
     font-family: $text-default-font-family;
     text-rendering: optimizeLegibility !important;
     -webkit-font-smoothing: antialiased !important;
@@ -42,19 +43,28 @@ label {
     font-size: $text-font-size-sunnyside;
 }
 
+@mixin header-background($url) {
+    background: url($url) center center no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
 /* Header Section */
 .landing-header {
-    display: table;
-    width: 100%;
-    height: 550px;
-    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
+    &__arrow {
+        height: 200px;
+        padding-top: 50px;
+    }
+ 
     &__background {
-        background: url(../images/desktop/image-header.jpg) center center no-repeat;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        background-size: cover;
-        -o-background-size: cover;
+        @include header-background("../images/mobile/image-header.jpg");
+        padding: 0px 0px 215px 0px;
     }
 
     &__tittle {
@@ -63,7 +73,12 @@ label {
         text-transform: uppercase;
         word-spacing: 7px;
         letter-spacing: 11px;
-        font-size: 30px;
+        font-size: 34px;
+        padding-top: 20px;
+    }
+
+    &__logo-name {
+        font-size: 40px;
     }
 
     &__nav-bar {
@@ -97,49 +112,87 @@ label {
 .landing-slogan {
     padding: 0;
 
-    &__main-container {
-        display: flex;
-    }
-    &__text-container {
-        display: flex;
-        align-items: center;
-        width: 54%;
-    }
-    &__text-article {
-        margin-left: 150px;
-        margin-right: 100px;
-    }
-    &__text-header {
-        text-align: left;
-        &--title {
-            font-family: $text-font-family-tittle;
-            color: $color-vdd-grayish-blue;
-            font-size: 38px;
-            word-spacing: 2px;
-            font-weight: bolder;
-        }
-    }
-    &__paragraph {
-        color: $color-d-grayish-blue;
-        font-size: 16px;
-    }
-    &__footer{
-        margin-top: 40px;
-    }
     &__picture {
         padding: 0;
     }
-    &__img {
-        width: 100%;
+    &__img-desktop {
+        display: none;
     }
-    &__background {
+    &__img-mobile {
         width: 100%;
+        display: flex;
     }
 }
 
-.landing-slogan a {
-    color: $color-vdd-grayish-blue;
-    font-family: $text-font-family-tittle;
-    font-size: 14px;
-    letter-spacing: 3px;
+@media screen and (min-width: $sm-device) {
+    /* Header Section */
+    .landing-header {
+        display: table;
+        width: 100%;
+        padding: 0;
+
+        &__arrow {
+            padding-top: -1px;
+        }
+
+        &__background {
+            @include header-background("../images/desktop/image-header.jpg");
+            padding: 5px 5px 300px 5px;
+        }
+    }    
+
+    /* Slogan Section */
+    .landing-slogan {
+        padding: 0;
+
+        &__main-container {
+            display: flex;
+        }
+        &__text-container {
+            display: flex;
+            align-items: center;
+            width: 54%;
+        }
+        &__text-article {
+            margin-left: 150px;
+            margin-right: 100px;
+        }
+        &__text-header {
+            text-align: left;
+            &--title {
+                font-family: $text-font-family-tittle;
+                color: $color-vdd-grayish-blue;
+                font-size: 38px;
+                word-spacing: 2px;
+                font-weight: bolder;
+            }
+        }
+        &__paragraph {
+            color: $color-d-grayish-blue;
+            font-size: 16px;
+        }
+        &__footer{
+            margin-top: 40px;
+        }
+        &__picture {
+            padding: 0;
+        }
+        &__img-desktop {
+            width: 100%;
+            display: flex;
+        }
+        &__img-mobile {
+            display: none;
+        }
+        &__background {
+            width: 100%;
+        }
+    }
+
+    .landing-slogan a {
+        color: $color-vdd-grayish-blue;
+        font-family: $text-font-family-tittle;
+        font-size: 14px;
+        letter-spacing: 3px;
+    }
 }
