@@ -8,6 +8,7 @@
   width: 100%;
   height: 100%;
   margin: 0;
+  background-color: #FEF5F5;
 }
 
 h1 {
@@ -108,7 +109,6 @@ label {
 }
 .landing-slogan__text-container {
   width: 100%;
-  height: 300px;
 }
 .landing-slogan__text-article {
   margin-left: 45px;
@@ -161,6 +161,7 @@ label {
     width: 100%;
     height: 100%;
     margin: 0;
+    background-color: #FEF5F5;
   }
   /* Header Section */
   .landing-header {
@@ -187,10 +188,12 @@ label {
   .landing-slogan__text-container {
     display: flex;
     align-items: center;
-    width: 54%;
+    flex-grow: 2;
+    flex-shrink: 0;
+    flex-basis: 50%;
   }
   .landing-slogan__text-article {
-    margin-left: 150px;
+    margin-left: 120px;
     margin-right: 100px;
   }
   .landing-slogan__text-header {
@@ -202,19 +205,30 @@ label {
     font-size: 38px;
     word-spacing: 2px;
     font-weight: bolder;
+    margin-right: 40px;
   }
   .landing-slogan__paragraph {
-    color: hsl(232deg, 10%, 55%);
+    color: hsl(210deg, 4%, 67%);
     font-size: 16px;
     text-align: left;
-    font-weight: normal;
+    font-weight: bold;
+    line-height: 1.6;
   }
   .landing-slogan__footer {
     margin-top: 40px;
     text-align: left;
   }
+  .landing-slogan__picture-container {
+    display: flex;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 50%;
+  }
   .landing-slogan__picture {
     padding: 0;
+    flex-grow: 2;
+    flex-shrink: 0;
+    flex-basis: 50%;
   }
   .landing-slogan__img-desktop {
     width: 100%;
