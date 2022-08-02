@@ -3,14 +3,18 @@
 
 @import './token.scss';
 
-body {
-    display: flex;
+@mixin body($display) {
+    display: $display;
     font-family: $text-default-font-family;
     text-rendering: optimizeLegibility !important;
     -webkit-font-smoothing: antialiased !important;
     width: 100%;
     height: 100%;
     margin: 0;
+}
+
+.landing {
+    @include body(flex)
 }
 
 h1 {
@@ -112,6 +116,33 @@ label {
 .landing-slogan {
     padding: 0;
 
+    &__text-container {
+        width: 100%;
+        height: 300px;
+    }
+    &__text-article {
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+    &__text-header {
+        text-align: center;
+        &--title {
+            font-family: $text-font-family-tittle;
+            color: $color-vdd-grayish-blue;
+            font-size: 38px;
+            word-spacing: 2px;
+            font-weight: bolder;
+        }
+    }
+    &__paragraph {
+        color: $color-d-grayish-blue;
+        font-size: 24px;
+        text-align: center;
+    }
+    &__footer {
+        margin-top: 20px;
+        text-align: center;
+    }
     &__picture {
         padding: 0;
     }
@@ -121,10 +152,21 @@ label {
     &__img-mobile {
         width: 100%;
         display: flex;
+        margin-top: 30px;
+    }
+    &__learn-more {
+        color: $color-vdd-grayish-blue;
+        font-family: $text-font-family-tittle;
+        font-size: 14px;
+        letter-spacing: 3px;
     }
 }
 
 @media screen and (min-width: $sm-device) {
+    
+    .landing {
+        @include body(flex)
+    }
     /* Header Section */
     .landing-header {
         display: table;
@@ -134,7 +176,6 @@ label {
         &__arrow {
             padding-top: -1px;
         }
-
         &__background {
             @include header-background("../images/desktop/image-header.jpg");
             padding: 5px 5px 300px 5px;
@@ -170,9 +211,11 @@ label {
         &__paragraph {
             color: $color-d-grayish-blue;
             font-size: 16px;
+            text-align: left;
         }
         &__footer{
             margin-top: 40px;
+            text-align: left;
         }
         &__picture {
             padding: 0;
@@ -187,12 +230,11 @@ label {
         &__background {
             width: 100%;
         }
-    }
-
-    .landing-slogan a {
-        color: $color-vdd-grayish-blue;
-        font-family: $text-font-family-tittle;
-        font-size: 14px;
-        letter-spacing: 3px;
+        &__learn-more {
+            color: $color-vdd-grayish-blue;
+            font-family: $text-font-family-tittle;
+            font-size: 14px;
+            letter-spacing: 3px;
+        }
     }
 }

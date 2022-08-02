@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Barlow:wght@700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Fraunces:wght@700&display=swap");
-body {
+.landing {
   display: flex;
   font-family: sans-serif;
   text-rendering: optimizeLegibility !important;
@@ -97,6 +97,33 @@ label {
 .landing-slogan {
   padding: 0;
 }
+.landing-slogan__text-container {
+  width: 100%;
+  height: 300px;
+}
+.landing-slogan__text-article {
+  margin-left: 40px;
+  margin-right: 40px;
+}
+.landing-slogan__text-header {
+  text-align: center;
+}
+.landing-slogan__text-header--title {
+  font-family: "Fraunces";
+  color: hsl(212deg, 27%, 19%);
+  font-size: 38px;
+  word-spacing: 2px;
+  font-weight: bolder;
+}
+.landing-slogan__paragraph {
+  color: hsl(232deg, 10%, 55%);
+  font-size: 24px;
+  text-align: center;
+}
+.landing-slogan__footer {
+  margin-top: 20px;
+  text-align: center;
+}
 .landing-slogan__picture {
   padding: 0;
 }
@@ -106,9 +133,25 @@ label {
 .landing-slogan__img-mobile {
   width: 100%;
   display: flex;
+  margin-top: 30px;
+}
+.landing-slogan__learn-more {
+  color: hsl(212deg, 27%, 19%);
+  font-family: "Fraunces";
+  font-size: 14px;
+  letter-spacing: 3px;
 }
 
 @media screen and (min-width: 768px) {
+  .landing {
+    display: flex;
+    font-family: sans-serif;
+    text-rendering: optimizeLegibility !important;
+    -webkit-font-smoothing: antialiased !important;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+  }
   /* Header Section */
   .landing-header {
     display: table;
@@ -153,9 +196,11 @@ label {
   .landing-slogan__paragraph {
     color: hsl(232deg, 10%, 55%);
     font-size: 16px;
+    text-align: left;
   }
   .landing-slogan__footer {
     margin-top: 40px;
+    text-align: left;
   }
   .landing-slogan__picture {
     padding: 0;
@@ -170,7 +215,7 @@ label {
   .landing-slogan__background {
     width: 100%;
   }
-  .landing-slogan a {
+  .landing-slogan__learn-more {
     color: hsl(212deg, 27%, 19%);
     font-family: "Fraunces";
     font-size: 14px;
