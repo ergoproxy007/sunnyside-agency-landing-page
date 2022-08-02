@@ -97,13 +97,22 @@ label {
 .landing-slogan {
   padding: 0;
 }
+.landing-slogan__background-text {
+  display: flex;
+  background: url(../images/mobile/image-graphic-design.jpg) center center no-repeat;
+  height: 110vh;
+  background-position: 50%;
+  background-size: cover;
+  flex-direction: column-reverse;
+  margin-top: 40px;
+}
 .landing-slogan__text-container {
   width: 100%;
   height: 300px;
 }
 .landing-slogan__text-article {
-  margin-left: 40px;
-  margin-right: 40px;
+  margin-left: 45px;
+  margin-right: 45px;
 }
 .landing-slogan__text-header {
   text-align: center;
@@ -119,6 +128,7 @@ label {
   color: hsl(232deg, 10%, 55%);
   font-size: 24px;
   text-align: center;
+  font-weight: bold;
 }
 .landing-slogan__footer {
   margin-top: 20px;
@@ -197,6 +207,7 @@ label {
     color: hsl(232deg, 10%, 55%);
     font-size: 16px;
     text-align: left;
+    font-weight: normal;
   }
   .landing-slogan__footer {
     margin-top: 40px;
